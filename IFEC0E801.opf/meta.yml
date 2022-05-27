@@ -1,0 +1,31 @@
+id: IFEC0E801
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T16:42:26.758228'
+last_modified: '2022-05-27T16:42:26.758239'
+parser: null
+source_metadata:
+  title: 'RK: Gaṅgottaraparipṛcchā'
+  language: bo
+  base:
+    f4263:
+      title: Title
+      base_file: f4263.txt
+      order: 1
+    fC4FC:
+      title: Preface
+      base_file: fC4FC.txt
+      order: 2
+    f43E3:
+      title: Colophon
+      base_file: f43E3.txt
+      order: 3
+  chapter_to_tile: {}
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null

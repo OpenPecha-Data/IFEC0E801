@@ -1,0 +1,519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1179' accesskey='1'>RK: Gaṅgottaraparipṛcchā</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>RK: Gaṅgottaraparipṛcchā<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1179[6314]" value="6314" id="lancheckbox" checked >Tibetan: , Kg dkon brtsegs ca</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1179[6315]" value="6315" id="lancheckbox" checked >Chinese: T.310(31)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1179[6316]" value="6316" id="lancheckbox" checked >English: eng</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1179">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1179">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1179'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1179">Search in RK: Gaṅgottaraparipṛcchā</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1179'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1179'>RK: Gaṅgottaraparipṛcchā</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1179" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="154754.Title|154755.Preface|154756.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154754.Title" border=0 hspace=2><a id="href_154754.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1179&mid=1993623&level=1&cid=877942" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154755.Preface" border=0 hspace=2><a id="href_154755.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1179&mid=1993624&level=1&cid=877943" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154756.Colophon" border=0 hspace=2><a id="href_154756.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1179&mid=1993689&level=1&cid=878004" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('154755.Preface|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1179&amp;mid=1993624&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1179&amp;cid=877943&amp;mid=1993624&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1179&amp;cid=877943&amp;mid=1993624&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><div class='kilderef' id='8964350'></div><div class='clear'></div><span id='8964350bi' class='paragraph'>
+							(222a3) || ’phags pa dkon mchog brtsegs pa chen po’i chos kyi rnam grangs le’u stong phrag brgya pa las le’u sum cu rtsa gcig (4) pa ste | gang gā’i mchog gis zhus pa lung bstan pa | bam po phyed pa ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><div class='kilderef' id='8964418'></div><div class='clear'></div><span id='8964418bi' class='paragraph'>
+							會第三十一  大唐三藏菩提流志奉　詔譯&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><div class='kilderef' id='8964486'></div><div class='clear'></div><span id='8964486bi' class='paragraph'>
+							Chapter Thirty-One of the Exalted Mahāratnakūṭa Dharmaparyāya in One Hundred Thousand Chapters: “Explanation of the Questions of Gaṅgottarā”. Half a fascicle.<a class='fotnote rn' name='FN6316rn1' href='#N6316rn1'><sup>1</sup></a>
+&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964351bi' class='paragraph'>
+							rgya gar skad du | ārya ganggottara pari pritstshā nāma mahāyāna sūtra |&nbsp;</span><span id='8964352bi' class='paragraph'>
+						 bod skad du | ’phags pa gang gā’i mchog gis zhus pa zhes bya ba theg pa chen po’i mdo |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964419bi' class='paragraph'>
+							&nbsp;</span><span id='8964420bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964487bi' class='paragraph'>
+							In the language of India: Ārya Gaṅgottaraparipṛcchā nāma mahāyānasūtra&nbsp;</span><span id='8964488bi' class='paragraph'>
+						 &nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964353bi' class='paragraph'>
+							sangs rgyas dang byang chub sems dpa’ (5) thams cad la phyag ’tshal lo ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964421bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964489bi' class='paragraph'>
+							Homage to all Buddhas and Bodhisatvas!<a class='fotnote rn' name='FN6316rn2' href='#N6316rn2'><sup>2</sup></a>
+&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964354bi' class='paragraph'>
+							’di skad bdag gis thos pa dus gcig na | bcom ldan ’das mnyan yod na rgyal bu rgyal byed kyi tshal mgon med zas sbyin gyi kun dga' ra ba na bzhugs te |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964422bi' class='paragraph'>
+							如是我聞。一時佛在舍衛國祇樹給孤獨園。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964490bi' class='paragraph'>
+							This is what I have heard: Once, the Blessed One was staying in Jeta's Grove, in the pleasure garden donated by Anāthapiṇḍada.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964355bi' class='paragraph'>
+							de'i tshe grong khyer chen po mnyan yod na dge bsnyen ma gang gā’i mchog ces bya ba zhig gnas (6) so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964423bi' class='paragraph'>
+							時舍衛城有優婆夷。名恒河上。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964491bi' class='paragraph'>
+							At that time, a laywoman by the name of Gaṅgottarā was living in the great city of Śrāvastī.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964356bi' class='paragraph'>
+							de nas dge bsnyen ma gang gā’i mchog mnyan yod nas byung nas rgyal bu rgyal byed kyi tshal mgon med zas sbyin gyi kun dga’ ra ba ga la ba der song ste phyin nas bcom ldan ’das kyi zhabs la mgo bos phyag ’tshal te phyogs gcig tu 'dug go |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964424bi' class='paragraph'>
+							從其住處來詣佛所。頂禮佛足退坐一面。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964492bi' class='paragraph'>
+							One day, the laywoman Gaṅgottarā left Śrāvastī and went to Jeta's Grove, to Anāthapiṇḍada's pleasure garden. Upon arriving, she saluted the Blessed One by placing her head at his feet, and sat down to one side.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964357bi' class='paragraph'>
+							phyogs gcig tu ’dug pa dang | (7) bcom ldan ’das kyis mkhyen bzhin du dge bsnyen ma gang gā’i mchog la gang gā’i mchog khyod da gzod gang nas ’ongs zhes smras so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964425bi' class='paragraph'>
+							爾時世尊問恒河上。汝從何來。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964493bi' class='paragraph'>
+							When she had sat down to one side, the Blessed One, although he already knew the answer, asked the laywoman Gaṅgottarā: Where have you come from, Gaṅgottarā?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964358bi' class='paragraph'>
+							gang gā’i mchog gis gsol pa | bcom ldan ’das gang zhig gis sprul pa la smras te | khyod da gzod gang nas ’ongs zhes de skad bgyis na ji skad (b1) lan ’debs par ’gyur lags |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964426bi' class='paragraph'>
+							彼優婆夷。即白佛言。世尊。若問化人汝從何來。如是問者當云何答。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964494bi' class='paragraph'>
+							Gaṅgottarā answered: Blessed One, if someone asked a magically conjured being, “Where have you come from?”, what would the answer be?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964359bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang gā’i mchog sprul pa la ni ’greng ba med | ’dug pa med | nyal ba med | ’ong ba med | ’gro ba med | ’chi ’pho med | skye ba med na ’di nas ’ongs so zhes de ci zhig ston par ’gyur |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964427bi' class='paragraph'>
+							世尊告言。夫化人者。無有往來。亦無生滅。云何當說有所從來。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964495bi' class='paragraph'>
+							The Blessed One replied: A magical being does not stand, does not sit, does not lie down, does not come, does not go, does not die and is not born.  How then can anyone say that they have come from somewhere?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964360bi' class='paragraph'>
+							gang (2) gā’i mchog gis gsol pa | bcom ldan ’das ci chos thams cad sprul pa lta bu lags sam |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964428bi' class='paragraph'>
+							又問諸法豈不皆如化耶。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964496bi' class='paragraph'>
+							Gaṅgottarā continued: Blessed One, aren't all phenomena like magical beings?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964361bi' class='paragraph'>
+							bka’ stsal pa | gang gā’i mchog de bzhin no ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964429bi' class='paragraph'>
+							佛言。如是如是。如汝所說。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964497bi' class='paragraph'>
+							Exactly, Gaṅgottarā, he replied.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964362bi' class='paragraph'>
+							gsol pa | bcom ldan ’das gal te chos thams cad sprul pa lta bu lags na | gang gā’i mchog khyod da gzod gang nas ’ongs (3) zhes ci’i slad du smra |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964430bi' class='paragraph'>
+							恒河上言。若一切法皆如化者。云何問言汝從何來。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964498bi' class='paragraph'>
+							If all phenomena are like magical beings, Blessed One, then why ask “Where have you come from, Gaṅgottarā?”, she responded.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964363bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang gā’i mchog sprul pa ni ngan song du mi ’gro | mtho ris su mi ’gro | yongs su mya ngan las ’das par mi ’gro na ci gang gā’i mchog kyang ngan song du mi ’gro | mtho ris su mi ’gro | yongs su mya ngan (4) las ’das par mi ’gro ’am |&nbsp;</span><span id='8964364bi' class='paragraph'>
+						 gang gā’i mchog gis gsol pa | bcom ldan ’das gal te bdag gis dge bsnyen ma gang gā’i mchog sprul pa'i rang bzhin las gzhan lags par mthong na ni dge bsnyen ma gang gā’i mchog ngan song du mchi ba 'am mtho ris su mchi ba (5) ’am yongs su mya ngan las ’das par mchi ba ma lags so zhes bdag sprul pa dang bstun du yang mi rung lags na |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964431bi' class='paragraph'>
+							世尊告曰。是幻化人不往惡趣。不生天上。不證涅槃。恒河上。汝亦爾耶。&nbsp;</span><span id='8964432bi' class='paragraph'>
+						 白言。我若見身異於幻化。乃可說言。往善惡趣。證於涅槃。我不見身異於幻化。云何說言。往諸惡趣乃至涅槃。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964499bi' class='paragraph'>
+							The Blessed One said: Gaṅgottarā, a magical being does not go to the realms of misery, nor to the heavenly realms, nor to parinirvāṇa. Do you too then, Gaṅgottarā, not go to the lower realms, nor to the heavenly realms, nor to parinirvāṇa?&nbsp;</span><span id='8964500bi' class='paragraph'>
+						 Gaṅgottarā answered: Blessed One, if I were to see myself as being anything other than a magical creation, and then were to say that I, the laywoman Gaṅgottarā, do not go to the lower realms, nor to the heavenly realms, nor to parinirvāṇa, then it would not be correct to say that I was like a magically created being.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964365bi' class='paragraph'>
+							bcom ldan ’das bdag gis dge bsnyen ma gang gā’i mchog sprul pa’i rang bzhin las gzhan lags par ma mthong ste | bcom ldan ’das de ltar bdag gis ma (6) mthong na dge bsnyen ma gang gā’i mchog ngan song du mchi ba ’am | mtho ris su mchi ba ’am | yongs su mya ngan las ’das par mchi ba zhes ji skad bstan par bgyi |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964433bi' class='paragraph'>
+							復次世尊。如涅槃性。畢竟不復生善惡趣及般涅槃。我觀己身亦復如是。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964501bi' class='paragraph'>
+							Blessed One, I don't see Gaṅgottarā as being anything other than a magical creation. That being the case, Blessed One, how can I maintain that the laywoman Gaṅgottarā goes to lower realms, to heavenly realms, to parinirvāṇa?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964366bi' class='paragraph'>
+							bcom ldan ’das de lta lags kyis kyang g.yo ba dang | rlom sems dang | bskyod pa dang | spros pa mchis na ji (7) ltar 'di snyam du bdag ngan song du ’gro ba ’am | mtho ris su ’gro ba ’am | yongs su mya ngan las ’das par ’gro ba’o snyam du sems lags te |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964434bi' class='paragraph'>
+							佛言。汝豈不趣涅槃界耶。恒河上言。如以此問問無生者。應云何答。佛言。無生者即涅槃也。Chinese needs to be checked here and for the next few lines of Tibetan.&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964502bi' class='paragraph'>
+							If that is the case, Blessed One, and if fluctuation, conceit, agitation, and mental proliferation exist, then how can anyone think that they go to lower realms, to heavenly realms, to parinirvāṇa?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964367bi' class='paragraph'>
+							bcom ldan ’das mya ngan las ’das pa’i dbyings ni nams kyang ngan song du mchi ba ’am | mtho ris su mchi ba ’am | yongs su (223a1) mya ngan las ’das par mchi ba ma lags te | bcom ldan ’das dge bsnyen ma gang gā’i mchog kyang de lta bu’i dbyings can lags so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964435bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964503bi' class='paragraph'>
+							Blessed One, nirvāṇa-nature never goes to the lower realms or to the heavenly realms, and never realizes parinirvāṇa. I, Blessed One, the laywoman Gaṅgottarā, also possess such a nature.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964368bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang gā’i mchog khyod ci yongs su mya ngan las ’das pa la yang dag (2) par ma zhugs sam |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964436bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964504bi' class='paragraph'>
+							The Blessed One said: Gaṅgottarā, haven't you yourself set out for parinirvāṇa?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964369bi' class='paragraph'>
+							gsol pa | bcom ldan ’das su zhig gis mi skye ba la smras te | khyod yongs su mya ngan las ’das pa la yang dag par ma zhugs sam zhes de skad bgyis na ji skad lan ’debs par ’gyur lags |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964437bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964505bi' class='paragraph'>
+							She answered: Blessed One, if someone asks the unborn “Haven't you set out for parinirvāṇa”, what would the answer be?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964370bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang (3) gā’i mchog mi skye ba zhes bya ba ni mya ngan las ’das pa’i tshig bla dags yin na de ci zhig lan ’debs par ’gyur |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964438bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964506bi' class='paragraph'>
+							The Blessed One replied: Gaṅgottarā, since the unborn is a synonym for nirvāṇa, then what can the answer be?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964371bi' class='paragraph'>
+							gang gā’i mchog gis gsol pa | bcom ldan ’das ci chos thams cad ni mya ngan las ’das pa dang mtshungs pa lags sam |&nbsp;</span><span id='8964372bi' class='paragraph'>
+						 bka’ stsal pa | gang gā’i (4) mchog de de bzhin te | chos thams cad ni mya ngan las ’das pa dang mtshungs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964439bi' class='paragraph'>
+							恒河上言。諸法豈不皆同涅槃。&nbsp;</span><span id='8964440bi' class='paragraph'>
+						 佛言。如是如是。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964507bi' class='paragraph'>
+							Gaṅgottarā answered: Blessed One, are all phenomena the same as nirvāṇa?&nbsp;</span><span id='8964508bi' class='paragraph'>
+						 He said: Exactly, Gaṅgottarā. All phenomena are the same as nirvāṇa.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964373bi' class='paragraph'>
+							gsol pa | bcom ldan ’das gal te chos thams cad mya ngan las ’das pa dang mtshungs pa lags na gang gā’i mchog khyod yongs su mya ngan las ’das pa la yang dag par ma zhugs sam zhes (5) nga ci zhig smra ste |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964441bi' class='paragraph'>
+							世尊。若一切法同涅槃者。云何問言。汝豈不趣涅槃界耶。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964509bi' class='paragraph'>
+							She said: Blessed One, if all phenomena are the same as nirvāṇa, why ask “Haven't you yourself set out for nirvāṇa?”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964374bi' class='paragraph'>
+							bcom ldan ’das su zhig gis sprul pa la smras te | khyod yongs su mya ngan las ’das pa la yang dag par ma zhugs sam zhes de skad bgyis na ji skad lan ’debs par ’gyur lags |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964442bi' class='paragraph'>
+							復次世尊。譬如化人。謂化人曰。汝豈不趣涅槃界耶。彼於是問。當云何答。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964510bi' class='paragraph'>
+							Blessed One, if someone asked a magical being, “Haven't you yourself set out for nirvāṇa?”, what could the answer be?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964375bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang gā’i mchog dri ba ’di (6) ni dmigs pa med pa’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964443bi' class='paragraph'>
+							世尊告言。此所問者無有攀緣。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964511bi' class='paragraph'>
+							The Blessed One said: Gaṅgottarā, this question has no foundation.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964376bi' class='paragraph'>
+							gsol pa | ci bcom ldan ’das kyis dmigs pa dang bcas pa’i smra bas smras lags sam |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964444bi' class='paragraph'>
+							恒河上言。如來豈以有所攀緣而致斯問。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964512bi' class='paragraph'>
+							She said: Blessed One, are you making a statement which has a foundation?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964377bi' class='paragraph'>
+							bka’ stsal pa | gang gā’i mchog dri ba ’di ni dmigs pa med mod kyi | ’on kyang ’khor ’di na rigs kyi bu ’am | rigs kyi bu mo ’du ba dag (7) yod de | de dag gi don chen por ’gyur bas dris so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964445bi' class='paragraph'>
+							世尊告言。然我所問亦無攀緣。但為此會。有善男子及善女人。應可成熟故發斯問。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964513bi' class='paragraph'>
+							He said: Gaṅgottarā, this question has indeed no foundation. Nonetheless, I ask this question because it will be of great benefit to the noble sons and noble daughters who are gathered here in this assembly.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964378bi' class='paragraph'>
+							de ci’i phyir zhe na | gang gā’i mchog de bzhin gshegs pas ni chos nyid ces bya ba yang mngon par rdzogs par sangs ma rgyas na gang de las byung ba’i chos yongs su mya ngan las ’das pa la gnas pa lhag la yod |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964446bi' class='paragraph'>
+							何以故。如來於彼諸法。名字猶不可得。何有諸法及彼能趣般涅槃者。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964514bi' class='paragraph'>
+							Why? If the Tathāgata had not realized the way things are, Gaṅgottarā, then phenomena would still arise in his nirvāṇa.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964379bi' class='paragraph'>
+							gsol pa | (b1) gal te bcom ldan ’das kyis chos nyid ces bgyi ba yang mngon par rdzogs par sangs ma rgyas te | de las byung ba’i chos lta gang zhig mchis par gyur na bcom ldan ’das kyis byang chub kyi slad du ji ltar dge ba’i rtsa ba yang dag par bsgrubs lags |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964447bi' class='paragraph'>
+							恒河上言。若如是者。云何為菩提故積集善根。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964515bi' class='paragraph'>
+							She said: If the Blessed One had not realized the way things are, and phenomena were still arising, then how could the Blessed One have accomplished the roots of virtue in order to attain awakening.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964380bi' class='paragraph'>
+							bcom ldan ’das (2) gyis bka’ stsal pa | gang gā’i mchog gang dmigs pa de ni dge ba’i rtsa ba ma yin te | byang chub sems dpa’ dge ba’i rtsa ba de ni gang gi tshe yang dag par sgrub pa de’i tshe yang bsam gyis mi khyab pa nyid mi ’dor ro ||&nbsp;</span><span id='8964381bi' class='paragraph'>
+						 gang gi tshe yang dag par mi sgrub pa de’i tshe yang bsam gyis mi khyab (3) pa nyid mi ’dor ro ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964448bi' class='paragraph'>
+							若諸菩薩及彼善根。皆不可得。積集之時即無心故。非積集時亦復如是。&nbsp;</span><span id='8964449bi' class='paragraph'>
+						 恒河上言。所說無心欲明何義。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964516bi' class='paragraph'>
+							The Blessed One responded: Gaṅgottarā, that which has perception can not be a root of virtue. When a bodhisatva accomplishes roots of virtue, he does not abandon inconceivability.&nbsp;</span><span id='8964517bi' class='paragraph'>
+						 When he does not accomplish roots of virtue, he still does not abandon inconceivability.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964382bi' class='paragraph'>
+							gsol pa | bcom ldan ’das bsam gyis mi khyab pa la bsam gyis mi khyab pa zhes bgyi ba ci’i slad du bsam gyis mi khyab pa la bsam gyis mi khyab pa zhes bgyi |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964450bi' class='paragraph'>
+							世尊告曰。此法非思惟之所能知。亦非思惟之所能得。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964518bi' class='paragraph'>
+							She asked: Blessed One, the inconceivable is called "inconceivable". Why is it inconceivable?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964383bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang gā’i mchog chos 'di ni sems (4) pas thob par bya ba ma yin te | sems pas thob par byar mi nus so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964451bi' class='paragraph'>
+							何以故。此中心尚不可得。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964519bi' class='paragraph'>
+							The Blessed One said: This Dharma is not attained by the mind, the mind cannot attain it.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964384bi' class='paragraph'>
+							de ci’i phyir zhe na | ’di ltar ’di la ni sems nyid kyang mi dmigs na gang sems las rab tu byung ba’i chos lta ga la yod | gang gā’i mchog sems mi dmigs pa ni bsam gyis mi khyab pa’i rgyud ces (5) bya’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964452bi' class='paragraph'>
+							何況心所生法。以心不可得。是即說名不思議處。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964520bi' class='paragraph'>
+							Why? How can phenomena arise in the mind when the mind itself can not be perceived? Gaṅgottarā, the fact that the mind has no perception is called "the inconceivable continuum".&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964385bi' class='paragraph'>
+							bsam gyis mi khyab pa’i rgyud gang yin pa de ni thob pa ma yin | mngon par rtogs pa ma yin | shes pa ma yin | mngon sum du byas pa ma yin te | de ni thob par bya ba ma yin | kun nas nyon mongs pa ma yin rnam par byang ba ma yin no ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964453bi' class='paragraph'>
+							此不思議處。無得無證非染非淨。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964521bi' class='paragraph'>
+							The continuum which is inconceivable can not be attained, can not be understood, can not be known, can not be realized. It is not something that can be attained, it does not have kleśas, it is not fully purified.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964386bi' class='paragraph'>
+							de ci’i phyir zhe (6) na | gang gā’i mchog ’di ltar de bzhin gshegs pas ni chos thams cad nam mkha’ ltar nges par thugs su chud de | gang gā’i mchog chos thams cad ni nam mkha' dang mtshungs pa gnyen po med pa'o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964454bi' class='paragraph'>
+							何以故。如來常說一切諸法。猶如虛空無罣礙故。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964522bi' class='paragraph'>
+							How is that? Gaṅgottara, in this way the tathāgata certainly understands that all dharmas are like space. Gaṅgottara, all dharmas, like space, does not obstruct.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964387bi' class='paragraph'>
+							gsol pa | bcom ldan ’das gal te chos thams cad (7) nam mkha’ dang mtshungs pa gnyen po ma mchis pa lags na bcom ldan ’das kyis gzugs zhes btags pa dang | tshor ba dang | ’du shes dang | ’du byed rnams dang rnam par shes pa zhes btags pa dang | phung po rnams dang | khams rnams dang | skye mched (224a1) rnams dang | rten cing ’brel bar ’byung ba dang | zag pa dang bcas pa dang | zag pa ma mchis pa dang | kun nas nyon mongs pa dang | rnam par byang ba dang | ’khor ba dang | mya ngan las 'das pa zhes btags pa ji lta bu lags || (2)&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964455bi' class='paragraph'>
+							恒河上言。若一切法如虛空者。云何世尊。說有諸色受想行識。及於界處十二因緣。有漏無漏。是染是淨。生死涅槃。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964523bi' class='paragraph'>
+							She said: Blessed One, if all dharmas is equal to space, being without obstruction, then why does the Blessed One designate form (rūpa), feeling (vedanā), perception (saṃjñā), formation (samskāra), consciousness (vijñāna), the aggregates, the elements, the sense-bases, dependent arising, with pollution, without pollution, defilement, purification (vyavadāna), saṃsāra, nirvāṇa? How can this be?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964388bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang gā’i mchog ’di lta ste dper na bdag bdag ces ’dogs kyang bdag gang yang mi dmigs pa de bzhin du gang gā’i mchog ngas gzugs zhes btags te gzugs gang yang mi dmigs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964456bi' class='paragraph'>
+							佛告恒河上。譬如說我雖有言說。而實無有我相可得。我說諸色。實亦無有色相可得。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964524bi' class='paragraph'>
+							The Blessed One said: Gaṅgottarā, as an example: I designate “self, self”, however, I do not perceive anything as real. Similarly, Gaṅgottara, I designate form, but there is not any kind of form perceived.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964389bi' class='paragraph'>
+							de bzhin du ngas tshor ba dang | ’du (3) shes dang | ’du byed rnams dang | rnam par shes pa zhes btags te rnam par shes pa gang yang mi dmigs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964457bi' class='paragraph'>
+							乃至涅槃亦復如是。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964525bi' class='paragraph'>
+							Likewise, I designate feeling, perception, formation, and consciousness, but do not perceive any consciousness as real.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964390bi' class='paragraph'>
+							phung po rnams dang | khams rnams dang | skye mched rnams dang | rten cing ’brel bar ’byung ba dang | zag pa dang bcas pa dang | zag pa med pa dang | (4) kun nas nyon mongs pa dang | rnam par byang ba dang | ’khor ba dang | mya ngan las ’das pa zhes bya ba yang ngas btags te mya ngan las ’das pa gang yang mi dmigs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964458bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964526bi' class='paragraph'>
+							Skandhas, elements, sense-sources, dependent origination, pollution, non-pollution, defilements, purification, saṃsāra, nirvāṇa is designated, but I do not perceive it as anything real.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964391bi' class='paragraph'>
+							gang gā’i mchog ’di lta ste dper na smig rgyu rnams la ni chu yod med de mi dmigs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964459bi' class='paragraph'>
+							又如陽焰無水可得。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964527bi' class='paragraph'>
+							Gaṅgottara, as an example, in the mirage I do not perceive the existence or non-existence of water.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964392bi' class='paragraph'>
+							gang gā’i (5) mchog de bzhin du ngas gzugs zhes bya bar btags kyang gzugs gang yang mi dmigs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964460bi' class='paragraph'>
+							我說諸色乃至涅槃。亦復如是。See next two sections also. Chinese abbreviates what is given in full in Tibetan.&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964528bi' class='paragraph'>
+							Gaṅgottara, likewise, even though I designate form there is no real form perceived.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964393bi' class='paragraph'>
+							ngas tshor ba dang | ’du shes dang | ’du byed rnams dang | rnam par shes pa zhes btags kyang rnam par shes pa gang yang mi dmigs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964461bi' class='paragraph'>
+							See above.&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964529bi' class='paragraph'>
+							Even though I designate feeling, perception, formation, consciousness, I do not perceive consciousness as anything real.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964394bi' class='paragraph'>
+							phung po rnams dang | khams (6) rnams dang | skye mched rnams dang | rten cing ’brel bar ’byung ba dang | zag pa dang bcas pa dang | zag pa med pa dang | kun nas nyon mongs pa dang | rnam par byang ba dang | ’khor ba dang | mya ngan las ’das pa zhes bya bar ngas btags kyang don dam par na de (7) dag thams cad med cing mi dmigs so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964462bi' class='paragraph'>
+							See above.&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964530bi' class='paragraph'>
+							Even though I designate skandhas, elements, sense-sources, dependent origination, pollution, non-pollution, defilements, purification, saṃsāra, nirvāṇa, ultimately all these things are not there and are not perceived.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964395bi' class='paragraph'>
+							gang gā’i mchog gang chos la mchog tu ’dzin pa med par tshangs par spyad pa spyod pa de lta bu ni legs par gsungs pa’i chos ’dul ba la tshangs par spyod pa la gnas pa yin no ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964463bi' class='paragraph'>
+							恒河上。於我法中修梵行者。見一切法皆無所得。乃可說名真修梵行。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964531bi' class='paragraph'>
+							Gaṅgottarā, whoever is not attached to the dharma and practices the holy life, such a one is one who dwells in the holy life, in the well-explained dharmavinaya.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964396bi' class='paragraph'>
+							gang gā’i mchog mngon pa'i nga rgyal can (b1) gnas dmigs nas tshangs par spyad par spyod pa de dag gi tshangs par spyod pa de ni yongs su ma dag pa’o zhes nga smra'o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964464bi' class='paragraph'>
+							增上慢者說有所得。是則不名住真梵行。我說如是。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964532bi' class='paragraph'>
+							Gaṅgottarā, the ones who dwell in excessive pride in their practice of the holy life, those do not keep the holy life completely pure. So I declare.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964397bi' class='paragraph'>
+							gang dag tshangs par spyod pa yongs su ma dag pa de dag ni zab mo rgyud chad pa’i chos ’di lta bu ’di thos na dngangs skrag par ’gyur te |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964465bi' class='paragraph'>
+							增上慢人。聞此深法生大驚疑。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964533bi' class='paragraph'>
+							Those who do not keep the holy life completely pure become scared when they hear this profound dharma which cuts through.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964398bi' class='paragraph'>
+							de dag skye ba dang | (2) rga ba dang | na ba dang | ’chi ba dang | mya ngan dang | smre sngags ’don pa dang | sdug bsngal pa dang | yid mi bde ba dang | ’khrug pa rnams las yongs su mi ’grol te | de dag ni sdug bsngal gyi skal ba can du ’gyur ro zhes nga smra’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964466bi' class='paragraph'>
+							不能解脫生老病死憂悲苦惱。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964534bi' class='paragraph'>
+							They are not liberated from birth, aging, sickness, death, pain, lamentation, suffering, unease, disturbance. They will have their share of suffering. So I declare.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964399bi' class='paragraph'>
+							gang gā’i mchog da (3) ltar ram nga ’das pa’i phyi na yang rung ste | gang dag zab mo rgyud chad pa ’di lta bu’i chos ston pa de dag la mi gti mug pa dag gsod pa po’i ’du shes skyed par ’gyur te | de ltar mi gti mug pa de dag log par zin pas bsad pa’i zhe sdang bskyed nas ngan song du ’gro (4) bar ’gyur ro ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964467bi' class='paragraph'>
+							恒河上。若我滅後。有能宣說如是甚深斷流轉法。有愚癡輩由惡見故。於是法師生瞋害心。以是因緣墮諸地獄。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964535bi' class='paragraph'>
+							Gaṅgottara, now or after I pass away, those confused people who towards those who teach such a profound dharma that cuts off the stream produce the idea of murdering them, those stupid people have taken the wrong way and have produced the rage of murder and will go to the miserable states.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964400bi' class='paragraph'>
+							gang gā’i mchog gis gsol pa | bcom ldan ’das rgyud chad pa rgyud chad pa zhes bgyi ba ci’i slad du rgyud chad pa zhes bgyi |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964468bi' class='paragraph'>
+							恒河上言。如佛所說斷流轉法。以何義故。名為斷流轉。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964536bi' class='paragraph'>
+							Gaṅgottara said: Blessed One, you say “stream-chopping, stream-chopping”, why do you call it stream-chopping?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964401bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | gang gā’i mchog chos ’di ni rgyud gcad pa’am | dbye ba ’am | rnam (5) par gzhig pa ma yin te | de’i phyir rgyud chad pa zhes bya ste | ’di ni yang dag pa’i mtha’ zhes bya | bsam gyis mi khyab pa’i rgyud ces bya’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964469bi' class='paragraph'>
+							世尊告言。斷流轉者。所謂實際不思議界。此法不可穿鑿沮壞。是故說名斷流轉法。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964537bi' class='paragraph'>
+							The Blessed One said: Gaṅgottara, this is not cutting off, this is not differentiation, this is not destruction.  That is why it's called destruction.  That is why it is the absolute extreme of existence.  This is the inconceivable continuum.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964402bi' class='paragraph'>
+							de nas bcom ldan ’das kyis de’i tshe ’dzum pa mdzad do ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964470bi' class='paragraph'>
+							爾時世尊。凞怡微笑。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964538bi' class='paragraph'>
+							Then the Blessed One smiled.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964403bi' class='paragraph'>
+							de nas bcom ldan ’das kyi zhal gyi sgo nas ’od zer kha (6) dog sna tshogs kha dog du ma ’di lta ste | sngon po dang | ser po dang | dmar po dang | dkar po dang | btsod ka dang | shel dang | dngul gyi kha dog lta bu dag byung nas de dag gis ’jig rten gyi khams mtha’ yas mu med pa dag snang bar byas te ’od kyis khyab par (7) byas nas tshangs pa’i ’jig rten gyi bar du mngon par byung ste slar log nas bcom ldan ’das kyi zhal gyi sgor nub bo ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964471bi' class='paragraph'>
+							從其面門放種種光。青黃赤白紅頗梨色。其光普照無量國界。上至梵世還從如來頂上而入。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964539bi' class='paragraph'>
+							Then from the mouth of the Blessed One variegated light, with colours like green, yellow, white, red, crystal, and silver issued forth, and these lights without end, without limit, after having illuminated universes without end and without limit, and having filled them, they rose up to the Brahma heavens.  Then they came back again to their master and disappeared into the mouth of the Blessed One.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964404bi' class='paragraph'>
+							de nas tshe dang ldan pa kun dga’ bos bla gos phrag pa gcig tu gzar te pus mo g.yas pa’i lha nga sa la btsugs nas bcom ldan ’das ga la ba de logs (225a1) su thal mo sbyar ba btud de bcom ldan ’das la ’di skad ces gsol to ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964472bi' class='paragraph'>
+							爾時尊者阿難。見是事已心自念言。如來應正等覺。非無因緣而現微笑。作是念已。即從座起。偏袒右肩右膝著地。合掌向佛。而作是言。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964540bi' class='paragraph'>
+							Then the Venerable Ānanda placed his robe over one shoulder, knelt down on his right knee, and with hands folded towards the Blessed One, he asked the Blessed One this question.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964405bi' class='paragraph'>
+							bcom ldan ’das de bzhin gshegs pa rnams ni rgyu ma mchis par ’dzum pa mi mdzad na ’dzum pa mdzad pa’i rgyu gang lags rkyen gang lags |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964473bi' class='paragraph'>
+							以何因緣現此微笑。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964541bi' class='paragraph'>
+							“As Blessed Ones and Tathāgatas do not smile for no reason, what is the reason for smiling?”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964406bi' class='paragraph'>
+							bcom ldan ’das kyis (2) bka’ stsal pa | kun dga’ bo ngas mngon par shes te | sa phyogs ’di nyid du de bzhin gshegs pa stong gis gang gā’i mchog ces bya ba kho na’i dge bsnyen ma sha stag las brtsams te | chos kyi rnam grangs ’di bshad do ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964474bi' class='paragraph'>
+							佛言。我念往昔。有千如來。亦於此處說如是法。彼諸眾會。各各亦有恒河上優婆夷。而為上首。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964542bi' class='paragraph'>
+							The Blessed One said, “Ānanda, it has been directly known by me that here in this place 1000 Tathāgatas taught this turning of the Dharma to laywomen, all of them with the very same name of Gaṅgottara.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964407bi' class='paragraph'>
+							dge bsnyen ma de dag thams cad ni rab tu (3) byung nas phung po med pa’i mya ngan las ’das pa’i dbyings su yongs su mya ngan las ’das so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964475bi' class='paragraph'>
+							彼優婆夷及諸大眾。聞是法已皆悉出家。於無餘涅槃而得滅度。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964543bi' class='paragraph'>
+							All of those laywomen, have gone forth and have then been released in that element of release that is without remainder.”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964408bi' class='paragraph'>
+							de nas bcom ldan ’das la tshe dang ldan pa kun dga’ bos ’di skad ces gsol to || bcom ldan ’das chos kyi rnam grangs ’di’i ming ci lags | ji ltar gzung bar (4) bgyi |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964476bi' class='paragraph'>
+							阿難白佛言。當何名此經。我等云何受持。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964544bi' class='paragraph'>
+							Then the Venerable Ānanda said this to the Blessed One, “Blessed One, what is the name of this Dharma teaching, and how should we remember it?”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964409bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | kun dga’ bo chos kyi rnam grangs ’di ni dri ma med pa zhes bya ste | ’di dri ma med pa zhes bya bar zung shig |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964477bi' class='paragraph'>
+							佛言。此經名為離垢清淨。以是名字汝當受持。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964545bi' class='paragraph'>
+							The Blessed One answered, “This Dharma talk is called “Without Impurity”, and this is how it should be remembered.”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964410bi' class='paragraph'>
+							chos kyi rnam grangs ’di bstan pa na dge slong bdun brgya dang | dge slong ma bzhi brgya len pa med par zag pa rnams (5) las sems rnam par grol lo ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964478bi' class='paragraph'>
+							說此經時。七百比丘眾。四百比丘尼眾。諸漏永盡心得解脫。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964546bi' class='paragraph'>
+							When this Dharma teaching was given to 700 monks and 400 nuns without any attachment, their minds were completely liberated from the pollutions.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964411bi' class='paragraph'>
+							de nas ’dod pa na spyod pa dang | gzugs na spyod pa’i lha’i bu rnams kyis lha’i me tog rnams dang | tsan dan gyi phye ma rnams mngon par sprul te | bcom ldan ’das la gtor nas tshig ’di skad ces&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964479bi' class='paragraph'>
+							爾時欲界諸天子。化作種種天諸妙花而散佛上。作如是言。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964547bi' class='paragraph'>
+							Then the gods of the realm of sensual desire and the god-sons who inhabit the realm of form magically created divine flowers and sandalwood powder, scattered them over the Buddha, and then said,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964412bi' class='paragraph'>
+							’di ltar grong khyer mnyan yod (6) na dge bsnyen ma ’di lta bu gnas la de de bzhin gshegs pa dang lhan cig tu smra yang de’i lus ngal bar yang mi ’gyur ba dang | ji ltar yang gang gā’i mchog ’di sngon gyi rgyal ba la lhag par bya ba byas shing dge ba’i rtsa ba bskyed pa dang | yun ring po nas dge ba spyad pa dang || (7) yun ring po nas tshangs par spyad pa dang | sangs rgyas mang po la bsnyen bkur byas pa ’di ni ngo mtshar to zhes smras so ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964480bi' class='paragraph'>
+							此優婆夷甚為希有。能與如來共相詶對。得無所畏。是人已曾無量佛所。親近供養種諸善根。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964548bi' class='paragraph'>
+							“In the city of Śrāvastī lives a laywoman who was able to have a conversation with the Tathāgata without becoming tired. This is because she has served Victorious Ones of the past, produced the roots of skilfulness, practised the good for a long time, practised the holy life for a long time, paid homage to many Buddhas.  This is wonderful.  This is what we declare.”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964413bi' class='paragraph'>
+							bcom ldan ’das kyis bka’ stsal pa | lha’i bu dag de de bzhin te | ’di ni sngon gyi rgyal ba la lhag par bya ba byas pa | dge ba’i rtsa ba bskyed pa | yun (b1) ring du tshangs par spyad pa la gnas pa’o ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964481bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964549bi' class='paragraph'>
+							The Blessed One said, “That is so, god-sons.  This person has served former Victorious Ones, cultivated roots of skilfulness, and lived the holy life for a long time.”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8964414bi' class='paragraph'>
+							bcom ldan ’das kyis de skad ces bka’ stsal nas | dge bsnyen ma gang gā’i mchog dang | lha dang | mi dang lha ma yin dang | dri zar bcas pa’i ’jig rten yi rangs te | bcom ldan ’das kyis gsungs pa la mngon par (2) bstod do ||||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8964350";
+							kilderef = "Gp Kg dkon brtsegs ca  222a3 - Kg dkon brtsegs ca 225b2";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8964482bi' class='paragraph'>
+							佛說是經已。恒河上優婆夷。及諸天人阿修羅乾闥婆等。聞佛所說。皆大歡喜。信受奉行。&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8964418";
+							kilderef = "Gp T.310(31)  - T.310(31) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:32.333333333333%;'><div class='English'><span id='8964550bi' class='paragraph'>
+							When the Blessed One had pronounced this teaching, the laywoman Gaṅgottarā, and the world with its gods, asuras, and gandharvas were delighted, and praised his words highly.&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8964486";
+							kilderef = "Gp eng  - eng ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'></div><div class='textvar' style='width:32.333333333333%;'></div><div class='textvar' style='width:32.333333333333%;'><div style='' id='1' class='note rn'>1.<a class="internt" name='N6316rn1' href='#FN6316rn1'> Fascicle here translates Tibetan "bampo", a measurement of textual length equal to 300 ślokas.</a>&nbsp; <br>2.<a class="internt" name='N6316rn2' href='#FN6316rn2'> We prefer to follow the mainstream Buddhist Sanskrit usage of manuscripts and inscriptions by spelling ‘bodhisatva’ with a single rather than a double ‘t’, the latter being a convention of modern editors. See Gouriswar Bhattacharya, “How to Justify the Spelling of the Buddhist Hybrid Sanskrit Term Bodhisatva?,” in Eli Franco and Monika Zin (eds.), From Turfan to Ajanta: Festschrift for Dieter Schlingloff on the Occasion of his Eightieth Birthday, Rupandehi: Lumbini International Research Institute, 2010, Vol. II, pp. 35–50. Note that this is also the spelling used in Gāndhārī, as well as in Khotanese, in Tibetan lexicography, and in old Thai documents.</a>&nbsp; <br></div><div class='clear'></div></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=ea744e71-b3d4-11e1-82eb-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
